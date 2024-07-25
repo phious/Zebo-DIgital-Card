@@ -1,0 +1,77 @@
+.btn {
+    position: relative;
+    left: 130px;
+    top: 46px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #0056b3;
+  border-color: #004d99;
+}
+
+.btn:focus, .btn.focus {
+  color: #ffffff;
+  background-color: #0056b3;
+  border-color: #004d99;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+@media only screen and (max-width:768px){
+  .btn{
+    position: relative;
+    left: 130px;
+    top: 46px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    font-weight: 200;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1;
+    border-radius: 0.25rem;
+
+  }
+}
+@media (max-width:450px){
+    .btn{
+        position: relative;
+        left: 130px;
+        top: 46px;
+        justify-content: center;
+        align-items: center;
+        display: inline-block;
+        font-weight: 200;
+        color: #ffffff;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #007bff;
+        border: 1px solid #007bff;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+        line-height: 1;
+        border-radius: 0.25rem;
+    
+      }
+}
