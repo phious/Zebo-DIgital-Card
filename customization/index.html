@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZEbo Digital Card offers customizable NFC cards with advanced features for your business needs.">
+    <meta name="keywords" content="NFC cards, digital cards, card customization, ZEbo Digital Card">
+    <meta name="author" content="ZEbo Digital Card">
+    <title>Zebo Digital Card Customization</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Zebo Digital Card Customization</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="card-details">
+            <h2>Company Card Details</h2>
+            <form id="card-details-form" action="/submit" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="company-name">Company Name:</label>
+                    <input type="text" id="company-name" name="company-name" placeholder="Enter your company name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tagline">Tagline/Slogan (Optional):</label>
+                    <input type="text" id="tagline" name="tagline" placeholder="Enter tagline or slogan">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-name">Primary Contact Name:</label>
+                    <input type="text" id="contact-name" name="contact-name" placeholder="Enter the name of the primary contact" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-email">Contact Email Address:</label>
+                    <input type="email" id="contact-email" name="contact-email" placeholder="Enter contact email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-phone">Contact Phone Number (Optional):</label>
+                    <input type="tel" id="contact-phone" name="contact-phone" placeholder="Enter contact phone number">
+                </div>
+
+                <div class="form-group file-upload">
+                    <label for="logo">Upload Company Logo:</label>
+                    <input type="file" id="logo" name="logo" accept="image/*" required>
+                    <div class="file-drag-drop">
+                        <p>Drag & Drop logo here or <span>Click to select</span></p>
+                    </div>
+                    <small>Accepted formats: PNG, JPEG, SVG</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="business-type">Business Type:</label>
+                    <input type="text" id="business-type" name="business-type" placeholder="Enter the type of business">
+                </div>
+
+                <div class="form-group">
+                    <label for="card-theme">Card Theme:</label>
+                    <select id="card-theme" name="card-theme" required>
+                        <option value="">Select a theme</option>
+                        <option value="classic">Classic</option>
+                        <option value="modern">Modern</option>
+                        <option value="elegant">Elegant</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="company-address">Company Address:</label>
+                    <textarea id="company-address" name="company-address" rows="3" placeholder="Enter the company address" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="website-url">Website URL (Optional):</label>
+                    <input type="url" id="website-url" name="website-url" placeholder="Enter the company website URL">
+                </div>
+
+                <div class="form-group">
+                    <label for="social-media">Social Media Handles (Optional):</label>
+                    <input type="text" id="social-media" name="social-media" placeholder="Enter social media handles separated by commas">
+                </div>
+
+                <div class="form-group">
+                    <label for="business-email">Business Email:</label>
+                    <input type="email" id="business-email" name="business-email" placeholder="Enter the business email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone-number">Phone Number (Optional):</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Enter the company phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="additional-info">Additional Information (Optional):</label>
+                    <textarea id="additional-info" name="additional-info" rows="3" placeholder="Enter any additional instructions or information"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-type">Card Type:</label>
+                    <select id="card-type" name="card-type" required>
+                        <option value="">Select a card type</option>
+                        <option value="business">Business Card</option>
+                        <option value="membership">Membership Card</option>
+                        <option value="access">Access Card</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-finish">Card Finish:</label>
+                    <select id="card-finish" name="card-finish" required>
+                        <option value="">Select a finish</option>
+                        <option value="matte">Matte</option>
+                        <option value="glossy">Glossy</option>
+                        <option value="embossed">Embossed</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-size">Card Size (Optional):</label>
+                    <input type="text" id="card-size" name="card-size" placeholder="e.g., 85mm x 55mm">
+                </div>
+
+                <div class="form-group">
+                    <label for="design-notes">Design Notes/Instructions (Optional):</label>
+                    <textarea id="design-notes" name="design-notes" rows="3" placeholder="Enter any specific design instructions"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="color-scheme">Color Scheme (Optional):</label>
+                    <input type="color" id="color-scheme" name="color-scheme" placeholder="Pick a color">
+                </div>
+
+                <div class="form-group">
+                    <label for="fonts">Fonts (Optional):</label>
+                    <input type="text" id="fonts" name="fonts" placeholder="Enter preferred fonts">
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery-address">Delivery Address:</label>
+                    <textarea id="delivery-address" name="delivery-address" rows="3" placeholder="Enter the delivery address" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred-delivery-date">Preferred Delivery Date (Optional):</label>
+                    <input type="date" id="preferred-delivery-date" name="preferred-delivery-date">
+                </div>
+<!-- Template Selection -->
+<div class="form-group"></div>
+    <h2>Select a Template</h2>
+    <select id="template-select" class="form-input">
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+        <!-- Add more templates as needed -->
+    </select>
+    <button id="apply-template" class="form-input">Apply Template</button>
+
+
+
+
+                <button type="submit" class="form-button" >Submit Order</button>
+            </form>
+        </div>
+        
+
+        <!-- Card Customization Preview -->
+        <section id="customization-preview">
+            <h2>Customize and Preview Your Card</h2>
+            <div id="card-preview-container">
+                <canvas id="card-canvas" width="400" height="200"></canvas>
+                <button id="update-preview" class="form-input" >Update Preview</button>
+            </div>
+        </section>
+
+        
+        
+        
+        
+        <!-- Preview Modal -->
+        <div id="preview-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Card Preview</h2>
+                <canvas id="preview-canvas" width="400" height="200"></canvas>
+                <div id="preview-details"></div>
+                <button id="edit-button" class="form-button">Edit</button>
+                <button id="confirm-button" class="form-button">Confirm Order</button>
+            </div>
+        </div>
+        
+        
+      
+        
+        <!-- Customer Feedback Form -->
+        <section id="feedback">
+            <h2>We Value Your Feedback</h2>
+            <form id="feedback-form">
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Your feedback" class="form-textarea"></textarea>
+                <button type="submit" class="form-button">Submit Feedback</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Zebo Digital Card. All rights reserved.</p>
+    </footer>
+
+    <!-- Live Chat -->
+    <script>
+        window.__lc = window.__lc || {};
+        window.__lc.license = YOUR_LICENSE_NUMBER;
+        (function() {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = 'https://cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+    </script>
+
+    <!-- Add your existing scripts here -->
+    <script src="scripts.js"></script>
+</body>
+</html>

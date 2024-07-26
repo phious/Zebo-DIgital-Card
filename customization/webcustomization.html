@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Customize Your Webpage</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="customization.html">Customize Your Webpage</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <h3>Sidebar</h3>
+            <button id="add-section">Add Section</button>
+            <div id="templates">
+                <h4>Templates</h4>
+                <button class="template-btn" data-template="text">Text Section</button>
+                <button class="template-btn" data-template="image">Image Section</button>
+                <button class="template-btn" data-template="video">Video Section</button>
+                <button class="template-btn" data-template="gallery">Gallery Section</button>
+                <button class="template-btn" data-template="form">Form Section</button>
+            </div>
+            </div>
+            <div id="edit-controls" style="display:none;">
+                <h4>Selected Section</h4>
+                <button id="edit-section">Edit</button>
+                <button id="delete-section">Delete</button>
+            </div>
+        </aside>
+
+        <!-- Webpage Customization Form -->
+        <section id="webpage-customization">
+            <h2>Customize Your Webpage</h2>
+            <form id="webpage-customization-form">
+                <div class="form-group">
+                    <label for="page-title">Page Title:</label>
+                    <input type="text" id="page-title" name="page-title" placeholder="Enter the page title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="header-color">Header Color:</label>
+                    <input type="color" id="header-color" name="header-color">
+                </div>
+
+                <div class="form-group">
+                    <label for="background-color">Background Color:</label>
+                    <input type="color" id="background-color" name="background-color">
+                </div>
+
+                <div class="form-group">
+                    <label for="header-text">Header Text:</label>
+                    <input type="text" id="header-text" name="header-text" placeholder="Enter header text">
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" rows="5" placeholder="Enter page content"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="footer-text">Footer Text:</label>
+                    <input type="text" id="footer-text" name="footer-text" placeholder="Enter footer text">
+                </div>
+
+                <button type="button" id="preview-button">Preview</button>
+                <button type="button" id="save-button">Save & Preview</button>
+            </form>
+        </section>
+
+
+
+   <!-- Modal -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Section</h2>
+                <form id="edit-form">
+                    <div class="form-group">
+                        <label for="section-title">Title:</label>
+                        <input type="text" id="section-title" name="section-title" placeholder="Enter section title">
+                    </div>
+                    <div class="form-group">
+                        <label for="section-content">Content:</label>
+                        <textarea id="section-content" name="section-content" rows="5" placeholder="Enter section content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="section-image">Image URL (optional):</label>
+                        <input type="url" id="section-image" name="section-image" placeholder="Enter image URL">
+                    </div>
+                    <div class="form-group">
+                        <label for="section-video">Video URL (optional):</label>
+                        <input type="url" id="section-video" name="section-video" placeholder="Enter video URL">
+                    </div>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        
+        <!-- Webpage Preview Modal -->
+        <div id="webpage-preview-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Webpage Preview</h2>
+                <iframe id="webpage-preview" style="width: 100%; height: 80vh;"></iframe>
+                <button id="confirm-webpage-button">Confirm Design</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ZEbo Digital Card. All rights reserved.</p>
+    </footer>
+
+    <!-- Include JavaScript files -->
+    <script>
+        // JavaScript for handling form submission, preview, and saving
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const previewButton = document.getElementById('preview-button');
+            const saveButton = document.getElementById('save-button');
+            const previewModal = document.getElementById('webpage-preview-modal');
+            const closeModal = document.querySelector('#webpage-preview-modal .close');
+            const previewFrame = document.getElementById('webpage-preview');
+            const confirmButton = document.getElementById('confirm-webpage-button');
+
+            // Function to generate the HTML for the preview
+            function generateHTML() {
+                const title = document.getElementById('page-title').value;
+                const headerColor = document.getElementById('header-color').value;
+                const backgroundColor = document.getElementById('background-color').value;
+                const headerText = document.getElementById('header-text').value;
+                const content = document.getElementById('content').value;
+                const footerText = document.getElementById('footer-text').value;
+
+                return `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>${title}</title>
+                        <style>
+                            body { background-color: ${backgroundColor}; margin: 0; font-family: Arial, sans-serif; }
+                            header { background-color: ${headerColor}; color: #fff; padding: 10px; text-align: center; }
+                            main { padding: 20px; }
+                            footer { background-color: ${headerColor}; color: #fff; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <h1>${headerText}</h1>
+                        </header>
+                        <main>
+                            ${content}
+                        </main>
+                        <footer>
+                            <p>${footerText}</p>
+                        </footer>
+                    </body>
+                    </html>
+                `;
+            }
+
+            // Preview button click handler
+            previewButton.addEventListener('click', function() {
+                const htmlContent = generateHTML();
+                previewFrame.srcdoc = htmlContent;
+                previewModal.style.display = 'block';
+            });
+
+            // Save & Preview button click handler
+            saveButton.addEventListener('click', function() {
+                const htmlContent = generateHTML();
+
+                // Simulate saving and redirecting (replace with actual server-side handling)
+                const blob = new Blob([htmlContent], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const filename = `${document.getElementById('page-title').value || 'my-page'}.html`;
+
+                // Open the generated file
+                window.open(url, '_blank');
+                // Optionally, you could use XMLHttpRequest or fetch to send the data to a server
+
+                // Show preview modal
+                previewFrame.srcdoc = htmlContent;
+                previewModal.style.display = 'block';
+            });
+
+            // Close modal handler
+            closeModal.addEventListener('click', function() {
+                previewModal.style.display = 'none';
+            });
+
+            // Confirm design button handler
+            confirmButton.addEventListener('click', function() {
+                alert('Your design has been confirmed and saved.');
+                // Implement further actions (e.g., send to server or save in database)
+                previewModal.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
