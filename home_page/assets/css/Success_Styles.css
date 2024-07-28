@@ -1,0 +1,37 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top:160px;
+  }
+  
+  h1 {
+    color: #333333;
+  }
+  
+  .message {
+    margin-top: 2rem;
+  }
+  .messageT {
+    margin-top: 0;
+  }
+  
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  p {
+    margin-top: 1rem;
+    color: #666666;
+  }

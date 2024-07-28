@@ -12,7 +12,13 @@ body {
   background: #f8f9fb;
   font-family: "Poppins", sans-serif;
 }
-
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 .price-section {
   min-width: 100vh;
   min-height: 100vh;

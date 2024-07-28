@@ -47,17 +47,15 @@
                     <img src="assets/img/x-square.svg">
                     Pay per click
                 </div>
-                <button class="cta">Subscribe now</button>
+                <button class="cta" onclick="selectPlan(5000, 'Basic')">Subscribe now</button>
             </div>
-
-            
             
             <div class="price-column">
                 <div class="price-header">
                     <div class="price">
                         <div class="currency"></div>
                         8000birr
-                        <div class="per">/yr</div>
+                        <div class="per">/Yr</div>
                     </div>
                     <div class="plan">Standard</div>
                 </div>
@@ -88,17 +86,14 @@
                     <img src="assets/img/x-square.svg">
                     Pay per click
                 </div>
-                <button class="cta">Subscribe now</button>
+                <button class="cta" onclick="selectPlan(8000, 'Standard')">Subscribe now</button>
             </div>
-
             
-
             <div class="price-column">
                 <div class="price-header">
                     <div class="price">
                         <div class="currency"></div>
                         13,750birr
-                        
                         <div class="per">/4mo</div>
                     </div>
                     <div class="plan">Premium</div>
@@ -130,11 +125,11 @@
                     <img src="assets/img/x-square.svg">
                     Pay per click
                 </div>
-                <button class="cta">Subscribe now</button>
+                <button class="cta" onclick="selectPlan(13750, 'Premium')">Subscribe now</button>
             </div>
 
             <div class="price-column popular">
-                <div class="lable" id="popular">most popular</div>
+                <div class="label" id="popular">most popular</div>
                 <div class="price-header">
                     <div class="price">
                         <div class="currency"></div>
@@ -171,9 +166,23 @@
                     Pay per click
                 </div>
                 
-                <button class="cta">Subscribe now</button>
+                <button class="cta" onclick="selectPlan(13750, 'Premium ultra')">Subscribe now</button>
             </div>
         </div>
     </section>
+
+    <!-- Hidden form to forward selected plan -->
+    <form id="hiddenForm" action="orderCard.php" method="POST" style="display:none;">
+        <input type="hidden" id="selectedPrice" name="selectedPrice">
+        <input type="hidden" id="selectedPlan" name="selectedPlan">
+    </form>
+
+    <script>
+        function selectPlan(price, plan) {
+            document.getElementById('selectedPrice').value = price;
+            document.getElementById('selectedPlan').value = plan;
+            document.getElementById('hiddenForm').submit();
+        }
+    </script>
 </body>
 </html>
