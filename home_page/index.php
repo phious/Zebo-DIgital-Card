@@ -133,7 +133,7 @@
 
                         
                             <div class="video__container container" id="new-vid">
-                                <video id="my-video"  autoplay loop>
+                                <video id="my-video"  autoplay loop muted>
                                     <source src="assets/video/video2.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -216,7 +216,7 @@
 
                         
                             <div class="video__container container" id="new-vid">
-                                <video id="my-marketing" autoplay loop>
+                                <video id="my-marketing" autoplay loop muted>
                                     <source src="assets/video/video3.mp4" type="video/mp4">
                                 </video>
                             </div>
