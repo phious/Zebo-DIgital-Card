@@ -1,9 +1,21 @@
-<?php 
+<?php
+session_start();
+if(isset($_SESSION["user"])){
+    if(($_SESSION["user"])=="" or $_SESSION['usertype']!='a'){
+        
+    }else{
+        $useremail=$_SESSION["user"];
+    }
+
+}else{
+    header("location: ../index.php");
+} 
+
 include('include/header.php');
 include('include/navbar.php');
 
 
-session_start();
+
 
 //import database
 include("../connection.php");
@@ -60,7 +72,7 @@ include("../connection.php");
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>       <button class="btn btn-dark" onclick="window.location.href = '../logout.php'; ">
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>       <button class="btn btn-dark" onclick="window.location.href = '../Adminlogout.php'; ">
                                                                                                                 Logout
                                                                                                                 </button>
                     </div>
