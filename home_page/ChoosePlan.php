@@ -54,11 +54,8 @@
                     <div class="about__data">
                         <h2 class="section__title about__title">More Information <br> About our plans</h2>
                         <p class="about__description">
-                        We offer two options for our services. 
-                        The first option is a full-service package where we build a customized platform for you based on your chosen template. 
-                        This package includes a beautifully designed site and a complimentary e-commerce site. 
-                        The second option allows you to build your own page using our templates. While this option provides more customization freedom,
-                         it comes with fewer features compared to the full-service package. Choose the option that best fits your needs.
+                        We offer a full-service package where we build a customized platform for you based on your chosen template. 
+                        This package includes a beautifully designed site and a complimentary e-commerce site.
                         </p>
                         
                     </div>
@@ -111,28 +108,6 @@
                         <button class="button button--flex video__button" id="video-button">
                             <i class="ri-play-line video__button-icon" id="video-icon"></i>
                         </button>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about section" id="about">
-                <div class="about__container container grid">
-                    <div class="about__data">
-                        <h2 class="section__title about__title">The Self<br>customization plan</h2>
-                        <p class="about__description">
-                            Press the button below to design your own site
-                        </p>
-                        <a href="../customization/index.html" class="button">Customize now</a>
-                    </div>
-
-                    <div class="about__img">
-                        <div class="about__img-overlay">
-                            <img src="assets/img/about1.jpg" alt="" class="about__img-one">
-                        </div>
-
-                        <div class="about__img-overlay">
-                            <img src="assets/img/about2.jpg" alt="" class="about__img-two">
-                        </div>
                     </div>
                 </div>
             </section>
